@@ -1,0 +1,152 @@
+// FONT
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Oswald:wght@200;400;600&display=swap');
+
+// SCSS PORTFOLIO
+
+body {
+    max-width: 100%;
+    height: auto;
+    background: url("../assets/peak_background.svg") no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+
+    // HEADER ***********************************
+
+    header {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba($color: #FFFFFF, $alpha: 0.1);
+        border-radius: 20px;
+
+        .logo {
+            width: 35px;
+            height: 45px;
+            margin-left: 20px;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                transition: all 0.8s ease-in-out;
+
+                &:hover {
+                    transform: rotateY(180deg);
+                    
+                }
+            }
+        }
+
+        nav {
+            margin-right: 50px;
+            a {
+                text-decoration: none;
+                color: #2D2E32;
+                background-color: #F4F5FF;
+                padding: 8px;
+                border-radius: 5px;
+                border: 1px solid #2D2E32;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 600;
+                transition: all 0.4s ease-in-out;
+
+                &:hover {
+                    color: #F4F5FF;
+                    background-color: #2D2E32;
+                    border-color: #F4F5FF;
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+
+    // MAIN ***********************************
+
+    main {
+        width:100%;
+        margin-bottom: 100px;
+        
+        .title {
+            font-family: "Montserrat", sans-serif;
+            color: #F4F5FF;
+            position: relative;
+            width: 50%;
+            margin: 100px auto;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            
+            span {
+                position: absolute;
+                font-size: 7vw;
+                opacity: 0.1;
+            }
+            
+            h1 {
+                font-size: 4vw;
+                border-bottom: 2px solid #F4F5FF;
+                margin: 10px;
+            }
+        }
+
+        // PROJECT CONTAINER ****************************************
+
+        .project-container {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            
+            a {
+                text-decoration: none;
+                flex-grow: 1;
+                min-width: 33%;
+                max-width: 33%;
+                height: 300px;
+                border: 1px solid #F4F5FF;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                &:hover {
+                    .txt {
+                        height: 100%;
+                    }
+                }
+                    
+                .txt {
+                    width: 100%;
+                    height: 20%;
+                    background-color: rgba($color: #2D2E32, $alpha: 0.5);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    transition: all 0.5s ease-in-out ;
+                    
+
+                    h2 {
+                        text-align: center;  
+                        margin: 0;
+                        color: #F4F5FF;
+                        font-family: "Oswald", sans-serif;
+                    }
+
+                    p {
+                        max-width: 100%;
+                        display: none;
+                    }
+                }
+                
+            }
+        }
+    }
+}
