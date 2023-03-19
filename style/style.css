@@ -10,7 +10,7 @@ body {
 }
 
 body header {
-  width: 100%;
+  width: 95%;
   height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23,6 +23,7 @@ body header {
           align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
+  margin: 20px auto;
 }
 
 body header .logo {
@@ -108,6 +109,12 @@ body main .title h1 {
   margin: 10px;
 }
 
+@media screen and (max-width: 599px) {
+  body main .title h1 {
+    margin: 0;
+  }
+}
+
 body main .project-container {
   width: 100%;
   height: auto;
@@ -129,10 +136,8 @@ body main .project-container a {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  min-width: 33%;
-  max-width: 33%;
+  min-width: 250px;
   height: 300px;
-  border: 1px solid #F4F5FF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,13 +147,21 @@ body main .project-container a {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 body main .project-container a:hover .txt {
   height: 100%;
+  background-color: rgba(45, 46, 50, 0.95);
+}
+
+body main .project-container a:hover .txt p {
+  opacity: 1;
 }
 
 body main .project-container a .txt {
+  position: relative;
   width: 100%;
   height: 20%;
   background-color: rgba(45, 46, 50, 0.5);
@@ -177,7 +190,162 @@ body main .project-container a .txt h2 {
 }
 
 body main .project-container a .txt p {
-  max-width: 100%;
-  display: none;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  color: #F4F5FF;
+  font-family: "Montserrat", sans-serif;
+}
+
+body main .tech {
+  margin: 70px auto;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body main .tech .fa-brands {
+  font-size: 5vw;
+}
+
+body main .tech img {
+  width: 4.5vw;
+  -webkit-filter: brightness(60%);
+          filter: brightness(60%);
+}
+
+body main .tech .chatgpt {
+  width: 8vw;
+}
+
+body footer {
+  width: 100%;
+  height: auto;
+  background-color: #2D2E32;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body footer p {
+  font-family: "Montserrat";
+}
+
+body footer .logo {
+  margin: 30px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body footer .logo p {
+  margin: 0;
+  font-size: 3vw;
+  font-family: "Oswald", sans-serif;
+  color: #F4F5FF;
+  text-shadow: -5px 1px 7px rgba(6, 66, 180, 0.3);
+}
+
+@media screen and (max-width: 1024px) {
+  body footer .logo p {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  body footer .logo p {
+    font-size: 5vw;
+  }
+}
+
+body footer .reseaux-container {
+  width: 40%;
+  height: 70px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border: 1px solid #F4F5FF;
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+  body footer .reseaux-container {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  body footer .reseaux-container {
+    width: 80%;
+  }
+}
+
+body footer .reseaux-container a {
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body footer .reseaux-container a span {
+  border: 3px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+body footer .reseaux-container a span:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+body footer .reseaux-container a:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 /*# sourceMappingURL=style.css.map */
