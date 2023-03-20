@@ -55,6 +55,7 @@ body {
                 font-family: "Montserrat", sans-serif;
                 font-weight: 600;
                 transition: all 0.4s ease-in-out;
+                margin: auto 5px;
 
                 &:hover {
                     color: #F4F5FF;
@@ -107,14 +108,16 @@ body {
             width: 100%;
             height: auto;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             
             a {
                 text-decoration: none;
+                flex-basis: 0;
                 flex-grow: 1;
-                min-width: 250px;
+                min-width: 350px;
+                max-width: 34%;
                 height: 300px;
                 display: flex;
                 justify-content: center;

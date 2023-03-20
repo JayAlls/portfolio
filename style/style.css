@@ -61,6 +61,7 @@ body header nav a {
   font-weight: 600;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+  margin: auto 5px;
 }
 
 body header nav a:hover {
@@ -121,9 +122,9 @@ body main .project-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -133,10 +134,13 @@ body main .project-container {
 
 body main .project-container a {
   text-decoration: none;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  min-width: 250px;
+  min-width: 350px;
+  max-width: 34%;
   height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
