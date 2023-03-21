@@ -140,7 +140,6 @@ body main .project-container a {
       -ms-flex-positive: 1;
           flex-grow: 1;
   min-width: 350px;
-  max-width: 34%;
   height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
