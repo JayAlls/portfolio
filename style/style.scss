@@ -72,6 +72,7 @@ body {
     main {
         width:100%;
         margin-bottom: 100px;
+        position: relative;
         
         .title {
             font-family: "Montserrat", sans-serif;
@@ -116,12 +117,17 @@ body {
                 text-decoration: none;
                 flex-basis: 0;
                 flex-grow: 1;
-                min-width: 350px;
+                min-width: 510px;
                 height: 300px;
                 display: flex;
                 justify-content: center;
                 align-items: flex-end;
                 transition: all 0.4s ease-in-out;
+                @media screen and (max-width: 599px) {
+                    min-width: none;
+                    max-width: 100%;
+                }
+
                 &:hover {
                     .txt {
                         height: 100%;
@@ -170,7 +176,7 @@ body {
 
         .tech {
             margin: 70px auto;
-            width: 100%;
+            min-width: 100%;
             height: auto;
             display: flex;
             justify-content: space-around;
