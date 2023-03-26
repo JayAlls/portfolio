@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>JAYALLS | Portfolio</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="./style/style.scss">
-    <link rel="stylesheet" href="./style/style.css">
-    <script src="https://kit.fontawesome.com/9da81778fa.js" crossorigin="anonymous" defer></script>
-</head>
-<body>
-    <header>
-        <div class="logo">
+    <head>
+        <meta charset="UTF-8">
+        <title>JAYALLS | Portfolio</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/svg+xml" href="./assets/navLogo.svg" />
+        
+        <link rel="stylesheet" href="./style/style.scss">
+        <link rel="stylesheet" href="./style/style.css">
+        <script src="https://kit.fontawesome.com/9da81778fa.js" crossorigin="anonymous" defer></script>
+        <script src="./js/script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
             <img src="./assets/navLogo.svg" alt=" Jayalls Logo">
         </div>
 
@@ -93,7 +95,31 @@
             <img src="./assets/Canva-logo.webp" alt="Canva" title="Canva">
             <img class="chatgpt" src="./assets/ChatGPT-Logo.webp" alt="ChatGpt" title="ChatGpt">
         </div>
-    </main>
+
+        <div id="contact">
+            <div class="title">
+                <span>CONTACT</span>
+                <h1>PARLONS ENSEMBLE</h1>
+            </div>
+    
+            <form id="myForm"  method="POST" >
+              <label>
+                <input type="text" name="name" required placeholder="Nom"/>
+              </label>
+              <br />
+              <label>
+                <input type="email" name="email" required placeholder="Adresse e-mail"/>
+              </label>
+              <br />
+              <label>
+                <textarea name="message" required placeholder="Votre message"></textarea>
+              </label>
+              <br />
+              <button type="submit" id="submitBtn">Envoyer</button>
+            </form>
+          </div>
+
+        </main>
 
     <footer>
         <div class="logo">
